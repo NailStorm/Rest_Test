@@ -42,13 +42,10 @@ public class HttpTools {
     /**
      * Создаем фуру
      */
-     public void createResource(String token){
-         String json = "{\"country_code\":\"rus\"," +
-                 "\"class_uuid\":\"e7519b46-faf4-11e9-8f0b-362b9e155667\"," +
-                 "\"species_uuid\":\"2f293a4a-faf6-11e9-8f0b-362b9e155667\"," +
-                 "\"type_uuid\":\"f8a78bd0-fb03-11e9-8f0b-362b9e155667\"," +
-                 "\"title\":\"о003оо799\"," +
-                 "\"is_active\":true}";
+     public void createResource(String token, String classUuid, String speciesUuid, String typeUuid){
+         JsonBuilder json = new JsonBuilder();
+         String body = json.resourceJson(classUuid,speciesUuid, typeUuid);
+
          OkHttpClient client = new OkHttpClient();
 
      }

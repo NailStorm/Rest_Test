@@ -32,7 +32,8 @@ public class Main {
          * Создаем ресурс
          */
         okhttp.createResource(
-                okhttp.userToken(HOST, SECRET, CARRIER_LOGIN, CARRIER_PASSWORD));
+                okhttp.userToken(HOST, SECRET, CARRIER_LOGIN, CARRIER_PASSWORD),
+                VEHICLE_CLASS_UUID, VEHICLE_SPECIE_UUID, VEHICLE_TYPE_UUID);
 
         //прост юид
         System.out.println(tool.uuidGenerator());
